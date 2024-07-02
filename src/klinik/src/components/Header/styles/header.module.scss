@@ -1,0 +1,42 @@
+.header {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+
+    a,p {
+        font-size: 16px;
+    }
+
+    .leftNav{
+        width: 50%;
+        margin-left: 45px;
+
+        .logo{
+            color: #0463FA;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        
+    }
+    .rightNav {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        height: 75px;
+        align-items: center;
+        .navLinks{
+            margin-right: 30px;
+            text-decoration: none;
+        }
+        .navButton{
+            padding: 26px 40px;
+            background-color: #0463FA;
+            .apptLink{
+                color: #FFFF;
+                text-decoration: none;
+            }
+        }
+    }
+}

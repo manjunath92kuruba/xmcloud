@@ -1,13 +1,20 @@
 import {
     LinkField,
     withDatasourceCheck,
-    Field
+    Field,
+    Link
   } from '@sitecore-jss/sitecore-jss-nextjs';
   import { ComponentProps } from 'lib/component-props';
   import styles from './styles/header.module.scss'
   
   type NavigationLink = {
-    link: LinkField
+    link: {
+      jsonValue: {
+        value: {
+          href: string
+        }
+      }
+    }
     text: Field<string>;
   };
   
@@ -26,14 +33,10 @@ import {
   };
   
   const LinkListItem = (props: NavigationLink) => {
-    console.log(props.link);
-    const linkUrl= props.link?.value?.href;
-    console.log({linkUrl});
-    return <a href={linkUrl} className={styles.navLinks}>{props.text?.value}</a>;
+    return <a href={props.link.jsonValue.value.href} className={styles.navLinks}>{props.text?.value}</a>;
   };
   
   const Header = (props: HeaderProps): JSX.Element => {
-  
     const datasource = props.fields?.data?.datasource;
     if (datasource) {
       const list = datasource.children.results.map((element, index) => (

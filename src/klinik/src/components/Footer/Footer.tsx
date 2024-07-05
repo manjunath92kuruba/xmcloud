@@ -19,7 +19,6 @@ const FooterLinks = (props: FooterItem) => {
 }
 
 export const Default=(props: FooterProps): JSX.Element => {
-    console.log(props.fields.items);
     const footerList = props.fields.items.map((element: FooterItem, key: number) => (
         <FooterLinks key={key} link={element.link} text={element.text}></FooterLinks>
     ))

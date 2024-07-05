@@ -26,7 +26,6 @@ type HeroProps = ComponentProps & {
 }
 
 export const Default=(props: HeroProps): JSX.Element=>{
-    console.log(props.fields);
     const counterItems = props.fields.Counters.map((counterItem,index) => {
         return <div className="col-sm-4" key={index}>
                 <div className="border-start border-light ps-4">
@@ -44,7 +43,7 @@ export const Default=(props: HeroProps): JSX.Element=>{
         return <div className="owl-carousel-item position-relative" key={index}>
                     <Image field={carouselItem.fields.Image} className="img-fluid" />
                     <div className="owl-carousel-text">
-                        <h1 className="display-1 text-white mb-0">
+                        <h1 className="display-1 text-white mb-0 banner-text">
                             <Text field={carouselItem.fields.Title} />
                         </h1>
                     </div>

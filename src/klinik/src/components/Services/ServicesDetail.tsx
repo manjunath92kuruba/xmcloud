@@ -6,7 +6,7 @@ export const Default = () => {
     const content = sitecoreContext?.route?.fields?.Content as Field<string>;
     const iconClass = sitecoreContext?.route?.fields?.IconClass as Field<string>;
     return (
-        <div>
+        <div className="text-center mx-auto mb-5 wow fadeInUp">
             <h3>{title.value}</h3>
             <p>{content.value}</p>
             <p>{iconClass.value}</p>

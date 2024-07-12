@@ -28,6 +28,19 @@ a {
   &:hover {
     color: $text-basic-active;
   }
+
+  .fab {
+    font-size: 16px;
+  }
+}
+
+.apt-link {
+  font-size: 16px;
+  padding-top: 23px !important;
+}
+
+.logo {
+  font-size: 40px;
 }
 
 h1,
@@ -87,6 +100,10 @@ ul li {
   display: none;
 }
 
+.top-navigation {
+  height: 53px;
+}
+
 #header, #content, #footer, .sc-jss-empty-placeholder {
   width: 100%;
   display: flex;
@@ -99,6 +116,16 @@ ul li {
   padding: 10px;
   color:#fff;
   max-width: 500px;
+}
+
+.footer {
+  background-color: #1B2C51 !important;
+  h5 {
+    font-size: 20px;
+  }
+  a {
+    text-decoration: none;
+  }
 }
 
 // Klinik Styles starts from here
